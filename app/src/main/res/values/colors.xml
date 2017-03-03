@@ -6,5 +6,14 @@
 
 
     <color name="color_000000">#000000</color>
+    <color name="color_ffffffff">#ffffffff</color>
+
+    <color name="color_2a982f">#2a982f</color>
+    <color name="color_232627">#232627</color>
+    <color name="color_c0d60a">#c0d60a</color>
+    <color name="color_d5eef6">#d5eef6</color>
+    <color name="color_a0a7aa">#a0a7aa</color>
+    <color name="color_ced7db">#ced7db</color>
+
 
 </resources>

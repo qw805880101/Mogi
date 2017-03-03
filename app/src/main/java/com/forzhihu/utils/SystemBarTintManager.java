@@ -106,6 +106,34 @@ public class SystemBarTintManager {
 
     }
 
+    //初始化状态栏
+    public static boolean initStatusBar(Activity activity, int color) {
+        if (activity == null || color <= 0)
+            return false;
+        //取消状态栏修改颜色
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            activity.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams
+                    .FLAG_FULLSCREEN);//去掉信息栏
+            activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);//显示状态栏
+            setTranslucentStatus(activity, true);
+            return true;
+        }
+        return false;
+    }
+
+    @TargetApi(19)
+    public static void setTranslucentStatus(Activity activity, boolean on) {
+        Window win = activity.getWindow();
+        WindowManager.LayoutParams winParams = win.getAttributes();
+        final int bits = WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS;
+        if (on) {
+            winParams.flags |= bits;
+        } else {
+            winParams.flags &= ~bits;
+        }
+        win.setAttributes(winParams);
+    }
+
     /**
      * Enable tinting of the system status bar.
      *

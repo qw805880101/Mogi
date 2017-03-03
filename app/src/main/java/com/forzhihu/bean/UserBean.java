@@ -8,10 +8,25 @@ public class UserBean {
     private String userName;
     private String email;
     private String password;
+    private int img;
 
     public UserBean(String email, String password) {
         this.email = email;
         this.password = password;
+    }
+
+    public UserBean(String email, String password, int img) {
+        this.email = email;
+        this.password = password;
+        this.img = img;
+    }
+
+    public int getImg() {
+        return img;
+    }
+
+    public void setImg(int img) {
+        this.img = img;
     }
 
     public String getUserName() {

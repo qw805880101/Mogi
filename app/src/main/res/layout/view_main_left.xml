@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
+              android:layout_width="wrap_content"
               android:layout_height="match_parent"
-              android:background="#232627"
-              android:orientation="vertical">
+              android:background="@color/color_232627"
+              android:gravity="center_horizontal"
+              android:orientation="vertical"
+    >
 
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/icon_bell"
+    <com.forzhihu.view.HeadView
+        android:id="@+id/my_headview"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:src="@mipmap/main_bg"
         />
 
+
     <android.support.v7.widget.RecyclerView
+        android:id="@+id/left_list"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        />
 
 
 </LinearLayout>

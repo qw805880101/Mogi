@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.forzhihu.R;
 import com.forzhihu.utils.SystemBarTintManager;
 
 /**
@@ -25,12 +24,12 @@ public abstract class BaseActivity extends Activity {
 //        StatusBarUtils.initStatusBar(this, R.color.colorAccent);
         setTranslucentStatus(true);
         tintManager = new SystemBarTintManager(this);
-        //设置是否透明显示状态栏
-        tintManager.setStatusBarTintEnabled(true);
-        //设置状态栏颜色
-        tintManager.setStatusBarTintResource(R.color.colorAccent);
-        // 设置状态栏的文字颜色
-        tintManager.setStatusBarDarkMode(true, this);
+//        //设置是否透明显示状态栏
+//        tintManager.setStatusBarTintEnabled(true);
+//        //设置状态栏颜色
+//        tintManager.setStatusBarTintResource(R.color.colorAccent);
+//        // 设置状态栏的文字颜色
+//        tintManager.setStatusBarDarkMode(true, this);
         setContextView();
         findyView();
         setTitleColor(tintManager);

@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">lnk</string>
+
+
+    <string name="following">Following</string>
+    <string name="friends">FRIENDS</string>
+    <string name="followers">FOLLOWERS</string>
+    <string name="photo">PHOTOS</string>
+    <string name="videos">VIDEOS</string>
+
 </resources>
